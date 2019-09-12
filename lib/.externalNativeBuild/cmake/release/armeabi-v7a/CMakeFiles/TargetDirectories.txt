@@ -1,0 +1,3 @@
+D:/work/GitRepository/HearTest/luodademo/lib/.externalNativeBuild/cmake/release/armeabi-v7a/CMakeFiles/basicdsp-jni.dir
+D:/work/GitRepository/HearTest/luodademo/lib/.externalNativeBuild/cmake/release/armeabi-v7a/CMakeFiles/edit_cache.dir
+D:/work/GitRepository/HearTest/luodademo/lib/.externalNativeBuild/cmake/release/armeabi-v7a/CMakeFiles/rebuild_cache.dir

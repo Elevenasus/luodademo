@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="fill_parent"
+              android:layout_margin="15dp"
+              android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:id="@+id/chkLocalPath"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Use local file"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="FW Bootcode URI:"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/editFwBootcodePath"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="95"
+                    android:text="http://www.airoha.com.tw/ota-upload/Test/OTA/v29/AB1520P_Headset_V029_RealtimePEQ_TestFW_20180614_v2926_bootcode.bin"
+                    />
+
+                <Button
+                    android:id="@+id/btnBootFilePicker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="@dimen/margin10"
+                    android:text="..."
+                    android:visibility="gone"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="FW BIN URI:"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/editFwBinPath"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="60"
+                    android:text="http://www.airoha.com.tw/ota-upload/Test/OTA/v29/AB1520P_Headset_V029_RealtimePEQ_TestFW_20180614_v2926_Internal_16M.bin"/>
+
+                <Button
+                    android:id="@+id/btnFwFilePicker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:gravity="center"
+                    android:padding="@dimen/margin10"
+                    android:text="..."
+                    android:visibility="gone"/>
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DemoSound URI(Local Only):"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/editDemoSound"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="60"
+                    android:text="/sdcard/demo.ext"/>
+
+                <Button
+                    android:id="@+id/btnExtFilePicker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:gravity="center"
+                    android:padding="@dimen/margin10"
+                    android:text="..."
+                    android:visibility="gone"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DspParam URI(Local Only):"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/editDspParam"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="60"
+                    android:text="/sdcard/dspparam.dsp"/>
+
+                <Button
+                    android:id="@+id/btnDspParamFilePicker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:gravity="center"
+                    android:padding="@dimen/margin10"
+                    android:text="..."
+                    android:visibility="gone"/>
+            </LinearLayout>
+
+
+            <CheckBox
+                android:id="@+id/chkSwitchChannel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Switch to update Follower "/>
+
+            <Button
+                android:id="@+id/btnUpdateFw"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/margin10"
+                android:text="Update FW(bootcode + bin)"/>
+
+            <Button
+                android:id="@+id/btnResumeUpdateFw"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/margin10"
+                android:text="Resume Update FW(bootcode + bin)"/>
+
+            <Button
+                android:id="@+id/btnUpdateDemoSound"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/margin10"
+                android:text="Update DemoSound(external)"/>
+
+            <Button
+                android:id="@+id/btnUpdateDspParam"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/margin10"
+                android:text="Update DspParam(internal)"/>
+
+            <Button
+                android:id="@+id/btnResetAirDumpLog"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/margin10"
+                android:text="New File for AirDump Log"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

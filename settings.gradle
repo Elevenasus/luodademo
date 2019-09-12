@@ -1,0 +1,1 @@
+include ':app', ':lib', ':libunittestapp', ':peqlib-debug', ':pequxut', ':lpflib-debug', ':aclunittestapp', ':1520_fota_ut', ':autotestserver'

@@ -1,0 +1,1346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:id="@+id/activity_main"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.airoha.libunittest.MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true">
+                <TextView
+                    android:text="Ver"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textViewVer"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:orientation="horizontal">
+                <TextView
+                    android:text="Addr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:layout_width="159dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:text="00:03:33:22:18:67"
+                    android:ems="10"
+                    android:layout_alignParentStart="true"
+                    android:id="@+id/editTextSppAddr"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true">
+
+                <Button
+                    android:text="Con"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="18dp"
+                    android:textSize="10sp"
+                    android:id="@+id/buttonConSpp" />
+
+                <!--<Button-->
+                    <!--android:text="Con Ble"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginBottom="18dp"-->
+                    <!--android:textSize="10sp"-->
+                    <!--android:id="@+id/buttonConBle" />-->
+
+                <Button
+                    android:text="DisCon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="18dp"
+                    android:textSize="10sp"
+                    android:id="@+id/buttonDisConSPP" />
+
+                <TextView
+                        android:text="result"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textViewConSppResult" />
+                <TextView
+                    android:text="state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:id="@+id/textViewConSppState" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true">
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:text="Send Hex Cmd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/buttonSendHexCmd" />
+
+                <TextView
+                    android:text="0x"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:text="01 00 FC 04 01 48 01 0F "
+                    android:id="@+id/editTextSendHexCmd"
+                    android:maxLines="1"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:text="Hex Response:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <Space
+                    android:layout_width="5dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:text="resp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textViewHexResp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/buttonGetChannel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="GET_CHANNEL" />
+
+                <TextView
+                    android:id="@+id/textViewGetChannelResult"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="result" />
+
+                <Space
+                    android:layout_width="5dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/textViewGetChannelResp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="resp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/buttonGetChannelFr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="GET_CHANNEL_FR" />
+
+                <TextView
+                    android:id="@+id/textViewGetChannelFrResult"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="result" />
+
+                <Space
+                    android:layout_width="5dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/textViewGetChannelFrResp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="resp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/buttonGetBattery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="GET_BATTERY" />
+
+                <TextView
+                    android:id="@+id/textViewGetBatResult"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="result" />
+
+                <Space
+                    android:layout_width="5dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/textViewGetBatResp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="resp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/buttonGetBatteryFr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="GET_BATTERY_FR" />
+
+                <TextView
+                    android:id="@+id/textViewGetBatFrResult"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="result" />
+
+                <Space
+                    android:layout_width="5dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/textViewGetBatFrResp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="resp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/buttonGetFwVersion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="GET_FW_VERSION" />
+                <Space
+                    android:layout_width="5dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:text="result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textViewGetFwVersionResult"/>
+                <Space
+                    android:layout_width="5dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:text="resp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textViewGetFwVersionResp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/buttonGetFwVersionFr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="GET_FW_VERSION_FR" />
+                <Space
+                    android:layout_width="5dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:text="result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textViewGetFwVersionFrResult"/>
+                <Space
+                    android:layout_width="5dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:text="resp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textViewGetFwVersionFrResp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:text="GET_TWS_SLAVE_BATTERY"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/buttonGetTwsSlaveBattery" />
+
+                <TextView
+                    android:text="result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textViewGetTwsSlaveBatResult" />
+
+                <Space
+                    android:layout_width="5dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:text="resp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textViewGetTwsSlaveBatResp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:text="GET_CHG_BAT_STATUS"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/buttonGetChgBatStatus" />
+
+                <TextView
+                    android:text="result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textViewGetChgBatStatusResult" />
+
+                <Space
+                    android:layout_width="5dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:text="resp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textViewGetChgBatStatusResp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:text="GET_CHG_BAT_STATUS_Follower"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/buttonGetChgBatStatusFollower" />
+
+                <TextView
+                    android:text="result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textViewGetChgBatStatusFollowerResult" />
+
+                <Space
+                    android:layout_width="5dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:text="resp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textViewGetChgBatStatusFollowerResp" />
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:text="GET_VOLUME"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/buttonGetVolume" />
+
+                <TextView
+                    android:text="result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textViewGetVolResult" />
+
+                <Space
+                    android:layout_width="5dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:text="resp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textViewGetVolResp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:text="SET_VOLUME"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/buttonSetVolume" />
+
+                <TextView
+                    android:text="0~127: "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:id="@+id/editTextVol"
+                    android:inputType="numberDecimal" />
+
+                <Space
+                    android:layout_width="5dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:text="resp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textViewSetVolResp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:text="check voice prompt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/buttonGetVoiePrompt" />
+                <Space
+                    android:layout_width="5dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:text="resp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textViewGetVoicePromptResp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="Voice Prompt indication: "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <Space
+                    android:layout_width="5dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:text="result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textViewVPIndication"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:text="Enable Voice Prompt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/buttonEnableVP" />
+
+                <Space
+                    android:layout_width="5dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:text="resp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textViewEnablVPResp"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:text="Disable Voice Prompt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/buttonDisableVP" />
+
+                <Space
+                    android:layout_width="5dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:text="resp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textViewDisablVPResp"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:text="Enable Voice Command"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/buttonEnableVC" />
+
+                <Space
+                    android:layout_width="5dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:text="resp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textViewEnablVCResp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:text="Disable Voice Command"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/buttonDisableVC" />
+
+                <Space
+                    android:layout_width="5dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:text="resp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textViewDisablVCResp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:text="Get_Voice_Cmd_Status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/buttonGetVoiceCmdStatus" />
+                <Space
+                    android:layout_width="5dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:text="result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textViewGetVoiceCmdStatusResult"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:text="Enable Caller Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/buttonEnableCN" />
+
+                <Space
+                    android:layout_width="5dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:text="resp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textViewEnablCNResp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:text="Disable Caller Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/buttonDisableCN" />
+
+                <Space
+                    android:layout_width="5dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:text="resp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textViewDisablCNResp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:text="Get_Caller_Name_Status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/buttonGetCallerStatus" />
+                <Space
+                    android:layout_width="5dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:text="result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textViewGetCallerNameStatusResult"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:text="Next Voice Prompt Lang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/buttonNextVPLang" />
+
+                <TextView
+                    android:text="result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textViewNextVPResult"/>
+
+                <Space
+                    android:layout_width="5dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:text="resp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textViewNextVPResp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:text="Set Voice Prompt Lang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/buttonSetVPLang" />
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:id="@+id/editTextVpLang"
+                    android:inputType="numberDecimal" />
+                <Space
+                    android:layout_width="5dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:text="resp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textViewSetVPLangResp"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="Voice prompt status\n(0 as disable, 1 as enable): "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+                <TextView
+                    android:text="result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textViewVPStatus"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:text="Play Find Tone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/buttonFindMyAccessory" />
+                <Space
+                    android:layout_width="5dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:text="resp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textViewFindMyAsyResp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:text="Send_vibration_notification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/buttonSendVibation" />
+                <Space
+                    android:layout_width="5dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:text="resp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textViewSendVibResp"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:text="Check EQ"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/buttonGetPEQ" />
+                <Space
+                    android:layout_width="5dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:text="resp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textViewGetPEQResp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="EQ indication: "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <Space
+                    android:layout_width="5dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:text="result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textViewPEQIndication"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:text="change EQ mode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/buttonChangePEQ" />
+                <Space
+                    android:layout_width="5dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:text="resp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textViewChangePEQResp"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:text="Set A2DP EQ mode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/buttonSetA2dpEq" />
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:id="@+id/editTextA2dpIdx"
+                    android:inputType="numberDecimal" />
+                <Space
+                    android:layout_width="5dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:text="resp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textViewSetA2dpEqResp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:text="Set AUX EQ mode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/buttonSetAuxEq" />
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:id="@+id/editTextAuxIdx"
+                    android:inputType="numberDecimal" />
+                <Space
+                    android:layout_width="5dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:text="resp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textViewSetAuxEqResp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:text="Get Tws Slave FW Version"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/buttonGetTwsSlaveFwVersion" />
+                <Space
+                    android:layout_width="5dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:text="result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textViewGetTwsSlaveFwVersionResult"/>
+                <Space
+                    android:layout_width="5dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:text="resp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textViewGetTwsSlaveFwVersionResp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:text="Start OTA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/buttonStartOta" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:text="Pass Through(hex)"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/buttonPassThrough" />
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editTextPassThrough" />
+
+                <TextView
+                    android:id="@+id/textPassThroughResp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="resp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="Pass Through data(hex)"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/textPassThrough" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:text="Get Sector Info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/buttonGetSectorInfo" />
+                <TextView
+                    android:text="I"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    />
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editTextSectorIdx"
+                    android:text=""/>
+                <TextView
+                    android:text="O"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    />
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editTextSectorOffset" />
+                <TextView
+                    android:text="L"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    />
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editTextSectorLength" />
+
+                <TextView
+                    android:id="@+id/textGetSectorInfoResp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="resp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="Sector Info(hex)"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/textGetSectorInfoInd" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:text="Get Sector Info V2"
+                    android:textSize="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/buttonGetSectorInfoV2" />
+                <TextView
+                    android:text="OCF"
+                    android:textSize="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    />
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editTextSectorOCF"
+                    android:text=""/>
+                <TextView
+                    android:text="OGF"
+                    android:textSize="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    />
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editTextSectorOGF" />
+                <TextView
+                    android:text="HeadOffset"
+                    android:textSize="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"/>
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editTextSectorHeadoffset" />
+                <TextView
+                    android:text="DataLen"
+                    android:textSize="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"/>
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editTextSectorDataLen" />
+
+                <TextView
+                    android:id="@+id/textGetSectorInfoV2Resp"
+                    android:layout_width="wrap_content"
+                    android:textSize="8dp"
+                    android:layout_height="wrap_content"
+                    android:text="resp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="Sector InfoV2(hex)"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/textGetSectorInfoV2Ind" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:text="UpdatePEQRealTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/buttonUpdatePEQRealTime" />
+                <TextView
+                    android:id="@+id/textUpdatePEQRealTimeResp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="resp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:text="GetPeqHpfUserIdx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/buttonGetPeqHpfUserIdx" />
+                <TextView
+                    android:id="@+id/textGetPeqHpfUserIdxResp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="resp"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:text="Toggle Audio Transparency"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/buttonToggleAT" />
+
+                <Space
+                    android:layout_width="5dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:text="resp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textViewToggleATResp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:text="Get_Master_AT_Status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/buttonGetMasterATStatus" />
+
+                <Space
+                    android:layout_width="5dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:text="resp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textViewGetMasterATStatusResp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:text="Get_Slave_AT_Status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/buttonGetSlaveATStatus" />
+
+                <Space
+                    android:layout_width="5dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:text="resp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textViewGetSlaveATStatusResp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:text="Set_Master_AT_Gain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/buttonSetMasterATGain" />
+
+                <TextView
+                    android:text="0~15: "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:id="@+id/editTextSetMasterATGain"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"/>
+
+                <Space
+                    android:layout_width="5dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:text="resp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textViewSetMasterATGainResp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:text="Get_Master_AT_Gain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/buttonGetMasterATGain" />
+
+                <Space
+                    android:layout_width="5dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:text="resp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textViewGetMasterATGainResp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:text="Set_Slave_AT_Gain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/buttonSetSlaveATGain" />
+
+                <TextView
+                    android:text="0~15: "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:id="@+id/editTextSetSlaveATGain"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"/>
+
+                <Space
+                    android:layout_width="5dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:text="resp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textViewSetSlaveATGainResp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:text="Get_Slave_AT_Gain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/buttonGetSlaveATGain" />
+
+                <Space
+                    android:layout_width="5dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:text="resp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textViewGetSlaveATGainResp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="Get Flash Struct address"
+                    android:id="@+id/buttonGetFlashStructAddr"/>
+                <Space
+                    android:layout_width="5dp"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textViewFlashStructAddress"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

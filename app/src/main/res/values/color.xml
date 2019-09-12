@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="battery">#FF879CD0</color>
+    <color name="disconnect">#FF6CBF9A</color>
+    <color name="blue">#FF0B5FFA</color>
+    <color name="viewpages">#FFC4C4C4</color>
+
+</resources>

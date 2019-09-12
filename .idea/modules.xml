@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/1520_fota_ut/1520_fota_ut.iml" filepath="$PROJECT_DIR$/1520_fota_ut/1520_fota_ut.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aclunittestapp/aclunittestapp.iml" filepath="$PROJECT_DIR$/aclunittestapp/aclunittestapp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/autotestserver/autotestserver.iml" filepath="$PROJECT_DIR$/autotestserver/autotestserver.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lib/lib.iml" filepath="$PROJECT_DIR$/lib/lib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libunittestapp/libunittestapp.iml" filepath="$PROJECT_DIR$/libunittestapp/libunittestapp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lpflib-debug/lpflib-debug.iml" filepath="$PROJECT_DIR$/lpflib-debug/lpflib-debug.iml" />
+      <module fileurl="file://$PROJECT_DIR$/luodademo.iml" filepath="$PROJECT_DIR$/luodademo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/peqlib-debug/peqlib-debug.iml" filepath="$PROJECT_DIR$/peqlib-debug/peqlib-debug.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pequxut/pequxut.iml" filepath="$PROJECT_DIR$/pequxut/pequxut.iml" />
+    </modules>
+  </component>
+</project>

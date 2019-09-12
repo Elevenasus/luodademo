@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Airoha Headset</string>
+    <string name="app_ver">1.0.33.1</string>
+    <string name="actMain_msg_device_connect_fail">Connect fail</string>
+    <string name="title_select">"Select a Device"</string>
+
+    <!-- Common -->
+    <string name="confirm">Confirm</string>
+    <string name="cancel">Cancel</string>
+    <!-- label -->
+    <string name="devicename">Device Name</string>
+    <string name="edit">Edit</string>
+    <string name="update">UpDate</string>
+    <string name="switchbutton">Switch</string>
+    <string name="switchlang">Next</string>
+    <string name="call">CALL</string>
+    <string name="deviceRename">This will overwrite the device name？</string>
+    <string name="deviceDisconnect">Disconnect from the device？</string>
+    <string name="deviceDisconnected">Device is disconnected!</string>
+    <string name="a2dpMode">"A2DP:Mode "</string>
+    <string name="lineinMode">"AUX:Mode "</string>
+
+    <string name="PrefChkCallerName">PrefChkCallerName</string>
+
+    <string name="connected">Connected</string>
+    <string name="disconnected">Disconnected</string>
+    <string name="no_device">No devices found</string>
+
+</resources>

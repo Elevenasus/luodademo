@@ -1,0 +1,80 @@
+apply plugin: 'com.android.library'
+
+//model{
+    android {
+        compileSdkVersion 25
+
+        defaultConfig {
+            minSdkVersion 19
+            targetSdkVersion 23
+            versionCode 11050
+            versionName "1.1.05.0"
+            archivesBaseName = "lib-$versionName"
+//            multiDexEnabled true
+
+            ndk {
+                moduleName = "basicdsp-jni"
+                abiFilters 'armeabi-v7a', 'x86_64'
+            }
+        }
+
+
+        buildTypes {
+            release {
+                minifyEnabled false
+                proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//                ndk.abiFilters.add("armeabi-v7a")
+            }
+
+            debug {
+                minifyEnabled false
+                proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//                ndk.abiFilters.add("armeabi-v7a")
+            }
+        }
+
+        externalNativeBuild {
+            cmake {
+                path "CMakeLists.txt"
+            }
+        }
+
+        task javadoc(type: Javadoc) {
+            source = android.sourceSets.main.java.srcDirs
+            classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+            exclude "**/com/airoha/android/lib/ota/flash**"
+            exclude "**/com/airoha/android/lib/ota/cmd**"
+            exclude "**/com/airoha/android/lib/ota/logger**"
+            exclude "**/com/airoha/android/lib/ota/ACL_OCF.java**"
+            exclude "**/com/airoha/android/lib/ota/ACL_OGF.java**"
+            exclude "**/com/airoha/android/lib/ota/IACL_CMD.java**"
+            exclude "**/com/airoha/android/lib/ota/OnAirohaAclEventListener.java**"
+            exclude "**/com/airoha/android/lib/jniWrapper**"
+            exclude "**/com/airoha/android/lib/util**"
+            exclude "**/com/airoha/android/lib/spp/Broadcaster**"
+            exclude "**/com/airoha/android/lib/spp/Commander**"
+            exclude "**/com/airoha/android/lib/spp/PacketParser**"
+            exclude "**/com/airoha/android/lib/callerName/AMRHelper.java**"
+            exclude "**/com/airoha/android/lib/mmi/cmd**"
+            exclude "**/com/airoha/android/lib/mmi/AirohaDspActionIntent.java**"
+            exclude "**/com/airoha/android/lib/mmi/OnAirohaCallerNameEventListener.java**"
+            destinationDir = file("../sdkdoc/")
+            options.encoding = "UTF-8"
+            failOnError false
+        }
+    }
+//}
+
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    //    compile 'com.android.support:appcompat-v7:23.0.0'
+    implementation 'com.android.support:support-v4:23.0.0'
+    //    compile 'com.google.android.gms:play-services-appindexing:8.1.0'
+    //    compile 'org.apache.commons:commons-io:1.3.2'
+    implementation project(':peqlib-debug')
+    implementation project(':lpflib-debug')
+    implementation 'com.google.guava:guava:19.0'
+}
+
+//apply plugin: 'java'

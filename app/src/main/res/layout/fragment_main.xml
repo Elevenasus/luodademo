@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FFE6E6E6">
+
+    <LinearLayout
+            android:id="@+id/linearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:orientation="horizontal"
+        android:visibility="visible">
+
+        <Button
+                android:id="@+id/prevbtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/actionbar_button_state"
+                android:text="Basic"
+                android:textColor="@color/viewpages"
+            android:visibility="visible" />
+
+        <View
+                android:layout_width="1dp"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="@dimen/margin5"
+                android:layout_marginTop="@dimen/margin5"
+                android:background="@android:color/white"/>
+
+        <Button
+                android:id="@+id/nextbtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/actionbar_button_state"
+                android:text="Advanced"
+                android:textColor="@color/viewpages"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linearlayout"/>
+
+</RelativeLayout>

@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:id="@+id/activity_main"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    tools:context="com.airoha.aclunittestapp.MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true">
+                <TextView
+                    android:text="Ver"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textViewVer"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:orientation="horizontal">
+                <TextView
+                    android:text="Addr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:layout_width="159dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:text="00:03:33:22:18:67"
+                    android:ems="10"
+                    android:layout_alignParentStart="true"
+                    android:id="@+id/editTextSppAddr"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true">
+
+                <Button
+                    android:text="Con"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="18dp"
+                    android:textSize="10sp"
+                    android:id="@+id/buttonConSpp" />
+
+                <Button
+                    android:text="DisCon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="18dp"
+                    android:textSize="10sp"
+                    android:id="@+id/buttonDisConSPP" />
+
+                <TextView
+                    android:text="result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textViewConSppResult" />
+                <TextView
+                    android:text="state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:id="@+id/textViewConSppState" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Unlock External Flash"
+                    android:id="@+id/btnUnlockExternalFlash"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="Status: "/>
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvRespUnlockExternalFlash"
+                    android:text=""/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Erase per Page to External Flash"
+                    android:id="@+id/btnErasePageExternalFlash"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="Status: "/>
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvRespErasePageExternalFlash"
+                    android:text=""/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Write Data per Page to External Flash"
+                    android:id="@+id/btnWritePageDataExternalFlash"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="Status: "/>
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvRespWritePageDataExternalFlash"
+                    android:text=""/>
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="Addr. :"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvAddrWritePageDataExternalFlash"
+                    android:text=""/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Read data per Page from External Flash"
+                    android:id="@+id/btnReadPageDataExternalFlash"/>
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="Status: "/>
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvRespReadPageDataExternalFlash"
+                    android:text=""/>
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="Addr: "/>
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvAddrReadPageDataExternalFlash"/>
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="Data: "/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvDataReadPageDataExternalFlash"
+                    android:text=""/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lock External Flash"
+                    android:id="@+id/btnLockExternalFlash"/>
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvRespLockExternalFlash"
+                    android:text="Status."/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
+

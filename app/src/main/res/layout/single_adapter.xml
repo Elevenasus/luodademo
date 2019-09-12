@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:layout_margin="10px">
+
+    <!-- 標題 -->
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center_vertical" />
+
+    <!-- 顏色分類 -->
+    <RelativeLayout
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_margin="3sp"
+        android:layout_gravity="right">
+        <!--android:background="@drawable/item_drawable" -->
+
+        <!-- 勾選 -->
+        <ImageView
+            android:id="@+id/selected_item"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:src="@drawable/selected_icon"
+            android:visibility="invisible" />
+
+    </RelativeLayout>
+
+</LinearLayout>

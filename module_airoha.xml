@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_airoha" default="compile.module.airoha">
+  <dirname property="module.airoha.basedir" file="${ant.file.module_airoha}"/>
+  
+  <property name="module.jdk.home.airoha" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.airoha" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.airoha" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.airoha" value="-encoding UTF-8 -source 1.7 ${compiler.args}"/>
+  
+  <property name="airoha.output.dir" value="${module.airoha.basedir}/build/classes/production/Airoha"/>
+  <property name="airoha.testoutput.dir" value="${module.airoha.basedir}/build/classes/test/Airoha"/>
+  
+  <path id="airoha.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="airoha.module.production.classpath">
+    <path refid="${module.jdk.classpath.airoha}"/>
+  </path>
+  
+  <path id="airoha.runtime.production.module.classpath">
+    <pathelement location="${airoha.output.dir}"/>
+  </path>
+  
+  <path id="airoha.module.classpath">
+    <path refid="${module.jdk.classpath.airoha}"/>
+    <pathelement location="${airoha.output.dir}"/>
+  </path>
+  
+  <path id="airoha.runtime.module.classpath">
+    <pathelement location="${airoha.testoutput.dir}"/>
+    <pathelement location="${airoha.output.dir}"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.airoha">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.airoha">
+    <patternset refid="excluded.from.module.airoha"/>
+  </patternset>
+  
+  
+  <target name="compile.module.airoha" depends="compile.module.airoha.production,compile.module.airoha.tests" description="Compile module Airoha"/>
+  
+  <target name="compile.module.airoha.production" depends="register.custom.compilers" description="Compile module Airoha; production classes"/>
+  
+  <target name="compile.module.airoha.tests" depends="register.custom.compilers,compile.module.airoha.production" description="compile module Airoha; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.airoha" description="cleanup module">
+    <delete dir="${airoha.output.dir}"/>
+    <delete dir="${airoha.testoutput.dir}"/>
+  </target>
+</project>

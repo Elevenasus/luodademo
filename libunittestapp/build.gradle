@@ -1,0 +1,34 @@
+apply plugin: 'com.android.application'
+
+//model{
+    android {
+        compileSdkVersion 25
+
+        defaultConfig {
+            applicationId = "com.airoha.libunittest"
+            minSdkVersion 19
+            targetSdkVersion 23
+            versionCode 49
+            versionName "1.0.49.0"
+            archivesBaseName = "libunittest-$versionName"
+//            multiDexEnabled true
+        }
+        buildTypes {
+            release {
+                minifyEnabled = false
+            }
+        }
+    }
+
+//}
+
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation project(':lib')
+    implementation 'com.android.support:appcompat-v7:24.0.0'
+    //compile 'com.android.support:support-v4:23.0.0'
+    //    compile 'com.google.android.gms:play-services-appindexing:8.1.0'
+    //    compile 'org.apache.commons:commons-io:1.3.2'
+    implementation 'com.jakewharton:butterknife:7.0.1'
+}

@@ -1,0 +1,48 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+
+    defaultConfig {
+        applicationId "com.airoha.pequxut"
+        minSdkVersion 19
+        targetSdkVersion 23
+        versionCode 10830
+        versionName "1.0.83.0"
+        archivesBaseName = "PeqUxUt-$versionName"
+//        multiDexEnabled true
+
+//        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        ndk {
+//                moduleName = "basicdsp-jni"
+            abiFilters 'armeabi-v7a'
+        }
+
+    }
+
+    dexOptions {
+        preDexLibraries true
+        maxProcessCount 8
+        // Instead of setting the heap Size for the DEX process, increase Gradle's
+        // heap Size to enable dex-in-process. To learm more, read the next section.
+        // javaMaxHeapSize "2048m"
+    }
+
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation project(':lib')
+    implementation 'com.android.support:appcompat-v7:23.0.0'
+    //    compile 'com.android.support:support-v4:23.0.0'
+    //    compile 'com.google.android.gms:play-services-appindexing:8.1.0'
+    //    compile 'org.apache.commons:commons-io:1.3.2'
+    implementation 'com.jakewharton:butterknife:7.0.1'
+}

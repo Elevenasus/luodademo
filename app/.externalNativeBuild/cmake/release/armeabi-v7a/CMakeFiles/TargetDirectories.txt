@@ -1,0 +1,3 @@
+G:/Airoha_Android_Projects/AirohaHeadsetSVN19434/app/.externalNativeBuild/cmake/release/armeabi-v7a/CMakeFiles/dsp-jni.dir
+G:/Airoha_Android_Projects/AirohaHeadsetSVN19434/app/.externalNativeBuild/cmake/release/armeabi-v7a/CMakeFiles/edit_cache.dir
+G:/Airoha_Android_Projects/AirohaHeadsetSVN19434/app/.externalNativeBuild/cmake/release/armeabi-v7a/CMakeFiles/rebuild_cache.dir

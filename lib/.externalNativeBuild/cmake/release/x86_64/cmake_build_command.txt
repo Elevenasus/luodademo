@@ -1,0 +1,14 @@
+Executable : D:\AndroidStudy\tools\android-sdk_r24.0.2-windows\android-sdk-windows\cmake\3.6.4111459\bin\cmake.exe
+arguments : 
+-HD:\work\GitRepository\HearTest\luodademo\lib
+-BD:\work\GitRepository\HearTest\luodademo\lib\.externalNativeBuild\cmake\release\x86_64
+-DANDROID_ABI=x86_64
+-DANDROID_PLATFORM=android-19
+-DCMAKE_LIBRARY_OUTPUT_DIRECTORY=D:\work\GitRepository\HearTest\luodademo\lib\build\intermediates\cmake\release\obj\x86_64
+-DCMAKE_BUILD_TYPE=Release
+-DANDROID_NDK=D:\AndroidStudy\tools\android-sdk_r24.0.2-windows\android-sdk-windows\ndk-bundle
+-DCMAKE_TOOLCHAIN_FILE=D:\AndroidStudy\tools\android-sdk_r24.0.2-windows\android-sdk-windows\ndk-bundle\build\cmake\android.toolchain.cmake
+-DCMAKE_MAKE_PROGRAM=D:\AndroidStudy\tools\android-sdk_r24.0.2-windows\android-sdk-windows\cmake\3.6.4111459\bin\ninja.exe
+-GAndroid Gradle - Ninja
+jvmArgs : 
+

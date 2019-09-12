@@ -1,0 +1,99 @@
+{
+  "project_info": {
+    "project_number": "564396271363",
+    "firebase_url": "https://airohaheadsetsvn14810.firebaseio.com",
+    "project_id": "airohaheadsetsvn14810",
+    "storage_bucket": "airohaheadsetsvn14810.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:564396271363:android:e79d70d3f8843cb8",
+        "android_client_info": {
+          "package_name": "com.airoha.android.spp.callername"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "564396271363-k8r4sm15m92r9ja24meloi05mslkgtnt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.airoha.android.spp.callername",
+            "certificate_hash": "9d78234cb97c3ad68f4ac76042f6b398762ad746"
+          }
+        },
+        {
+          "client_id": "564396271363-snauu1pcf2dc8q9m4tgliqgdgdu7omeq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAIWmi87WJJ4R-Bnt10pKb69suwO_0BBwU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "564396271363-snauu1pcf2dc8q9m4tgliqgdgdu7omeq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:564396271363:android:e04377589754df7b",
+        "android_client_info": {
+          "package_name": "com.airoha.android.spp.headset"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "564396271363-5ghj878ntsfgqnes7o03mqfge0q5pkr9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.airoha.android.spp.headset",
+            "certificate_hash": "9d78234cb97c3ad68f4ac76042f6b398762ad746"
+          }
+        },
+        {
+          "client_id": "564396271363-snauu1pcf2dc8q9m4tgliqgdgdu7omeq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAIWmi87WJJ4R-Bnt10pKb69suwO_0BBwU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "564396271363-snauu1pcf2dc8q9m4tgliqgdgdu7omeq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

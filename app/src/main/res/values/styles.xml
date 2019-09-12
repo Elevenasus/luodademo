@@ -1,0 +1,22 @@
+<resources>
+
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="@android:style/Theme.Holo.Light">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="MyTheme" parent="@android:style/Theme.Holo.Light">
+        <item name="android:actionBarStyle">@style/MyTheme.ActionBarStyle</item>
+    </style>
+
+    <style name="MyTheme.ActionBarStyle" parent="@android:style/Widget.Holo.Light.ActionBar">
+        <item name="android:titleTextStyle">@style/MyTheme.ActionBar.TitleTextStyle</item>
+        <item name="android:background">#FFFFFF</item>
+    </style>
+
+    <style name="MyTheme.ActionBar.TitleTextStyle" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/blue</item>
+    </style>
+
+</resources>

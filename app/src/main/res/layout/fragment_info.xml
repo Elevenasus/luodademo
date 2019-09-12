@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFE6E6E6"
+        android:orientation="vertical" >
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_height"
+            android:layout_marginLeft="@dimen/activity_vertical_margin"
+            android:layout_marginRight="@dimen/activity_vertical_margin"
+            android:background="@android:color/white"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/bluetooth_spp_padding"
+                android:text="@string/devicename" />
+
+            <Button
+                android:id="@+id/changenamebutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_margin="@dimen/bluetooth_spp_padding"
+                android:background="@drawable/common_button_state"
+                android:text="@string/edit"
+                android:visibility="visible" />
+
+            <EditText
+                android:id="@+id/nameedit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/changenamebutton"
+                android:layout_toRightOf="@+id/textView1"
+                android:ems="10"
+                android:singleLine="true"
+                android:focusable="true"
+                android:editable="true"
+                android:inputType="text"
+                android:enabled="true">
+            </EditText>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/buttonRoleSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ROLE_SWITCH" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonGetChannel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GET_CHANNEL" />
+
+            <TextView
+                android:id="@+id/textViewGetChannelResult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="result (1 as left, 2 as right)" />
+
+            <Space
+                android:layout_width="5dp"
+                android:layout_height="wrap_content" />
+
+            <!--<TextView-->
+                <!--android:id="@+id/textViewGetChannelResp"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="resp" />-->
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonGetChannelFr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GET_CHANNEL_FR" />
+
+            <TextView
+                android:id="@+id/textViewGetChannelFrResult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="result (1 as left, 2 as right)" />
+
+            <Space
+                android:layout_width="5dp"
+                android:layout_height="wrap_content" />
+
+            <!--<TextView-->
+                <!--android:id="@+id/textViewGetChannelFrResp"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="resp" />-->
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonGetBattery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GET_BATTERY" />
+
+            <TextView
+                android:id="@+id/textViewGetBatResult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="result" />
+
+            <Space
+                android:layout_width="5dp"
+                android:layout_height="wrap_content" />
+
+            <!--<TextView-->
+                <!--android:id="@+id/textViewGetBatResp"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="resp" />-->
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonGetBatteryFr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GET_BATTERY_FR" />
+
+            <TextView
+                android:id="@+id/textViewGetBatFrResult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="result" />
+
+            <Space
+                android:layout_width="5dp"
+                android:layout_height="wrap_content" />
+
+            <!--<TextView-->
+                <!--android:id="@+id/textViewGetBatFrResp"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="resp" />-->
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/buttonGetFwVersion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GET_FW_VERSION" />
+            <Space
+                android:layout_width="5dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:text="result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewGetFwVersionResult"/>
+            <Space
+                android:layout_width="5dp"
+                android:layout_height="wrap_content" />
+            <!--<TextView-->
+                <!--android:text="resp"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:id="@+id/textViewGetFwVersionResp"/>-->
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/buttonGetFwVersionFr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GET_FW_VERSION_FR" />
+            <Space
+                android:layout_width="5dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:text="result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewGetFwVersionFrResult"/>
+            <Space
+                android:layout_width="5dp"
+                android:layout_height="wrap_content" />
+            <!--<TextView-->
+                <!--android:text="resp"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:id="@+id/textViewGetFwVersionFrResp"/>-->
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_height"
+            android:layout_marginLeft="@dimen/activity_vertical_margin"
+            android:layout_marginRight="@dimen/activity_vertical_margin"
+            android:layout_marginTop="@dimen/divider"
+            android:background="@android:color/white"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/peq_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/bluetooth_spp_padding"
+                android:text="PEQ Mode" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/peq_textview"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:orientation="horizontal" >
+                    <TextView
+                        android:id="@+id/a2dptextview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="A2DP:Mode" />
+
+                    <TextView
+                        android:id="@+id/a2dpNumtextview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="/0" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:orientation="horizontal" >
+                <TextView
+                    android:id="@+id/lineintextview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="AUX:Mode" />
+                    <TextView
+                        android:id="@+id/lineinNumtextview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="/0" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/peqbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_margin="@dimen/bluetooth_spp_padding"
+                android:background="@drawable/common_button_state"
+                android:text="@string/switchbutton" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_height"
+            android:layout_marginLeft="@dimen/activity_vertical_margin"
+            android:layout_marginRight="@dimen/activity_vertical_margin"
+            android:layout_marginTop="@dimen/divider"
+            android:background="@android:color/white"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/bluetooth_spp_padding"
+                android:text="Voice Prompt" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:visibility="invisible"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/tvLang"
+                    android:layout_marginLeft="@dimen/bluetooth_spp_padding"
+                    android:text="123456" />
+
+                <TextView
+                    android:visibility="invisible"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/tvLangIdx"
+                    android:layout_marginLeft="@dimen/bluetooth_spp_padding"
+                    android:text="#" />
+
+                <TextView
+                    android:visibility="invisible"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/tvLangNum"
+                    android:layout_marginLeft="@dimen/bluetooth_spp_padding"
+                    android:text="/#" />
+
+                <ToggleButton
+                    android:id="@+id/toggleVP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textOff="OFF"
+                    android:textOn="ON" />
+
+                <Button
+                    android:id="@+id/changelang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/bluetooth_spp_padding"
+                    android:background="@drawable/common_button_state"
+                    android:text="@string/switchlang" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_height"
+            android:layout_marginLeft="@dimen/activity_vertical_margin"
+            android:layout_marginRight="@dimen/activity_vertical_margin"
+            android:layout_marginTop="@dimen/divider"
+            android:background="@android:color/white"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/bluetooth_spp_padding"
+                android:text="Caller Name Announcement" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:orientation="horizontal" >
+                <ToggleButton
+                    android:id="@+id/toggleCaller"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textOff="OFF"
+                    android:textOn="ON" />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_height"
+            android:layout_marginLeft="@dimen/activity_vertical_margin"
+            android:layout_marginRight="@dimen/activity_vertical_margin"
+            android:layout_marginTop="@dimen/divider"
+            android:background="@android:color/white"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/adjustvoltextview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/bluetooth_spp_padding"
+                android:text="Volume" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/adjustvoltextview" >
+
+                <SeekBar
+                    android:id="@+id/seekBar1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="127"
+                    android:progress="0" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_height"
+            android:layout_marginLeft="@dimen/activity_vertical_margin"
+            android:layout_marginRight="@dimen/activity_vertical_margin"
+            android:layout_marginTop="@dimen/divider"
+            android:background="@android:color/white" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/bluetooth_spp_padding"
+                android:text="Find My Accessory" />
+
+            <Button
+                android:id="@+id/findmydevice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_margin="@dimen/bluetooth_spp_padding"
+                android:background="@drawable/common_button_state"
+                android:text="@string/call" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_height"
+            android:layout_marginLeft="@dimen/activity_vertical_margin"
+            android:layout_marginRight="@dimen/activity_vertical_margin"
+            android:layout_marginTop="@dimen/divider"
+            android:background="@android:color/white"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/bluetooth_spp_padding"
+                android:text="Audio Transparency" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:orientation="horizontal">
+
+                <ToggleButton
+                    android:id="@+id/toggleAT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textOff="OFF"
+                    android:textOn="ON" />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_AT_master"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_height"
+            android:layout_marginLeft="@dimen/activity_vertical_margin"
+            android:layout_marginRight="@dimen/activity_vertical_margin"
+            android:layout_marginTop="@dimen/divider"
+            android:background="@android:color/white"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/textview_AT_master"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/bluetooth_spp_padding"
+                android:text="----Master Gain" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/textview_AT_master">
+
+                <SeekBar
+                    android:id="@+id/seekBar_AT_master"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false"
+                    android:max="15"
+                    android:progress="0" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_AT_slave"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_height"
+            android:layout_marginLeft="@dimen/activity_vertical_margin"
+            android:layout_marginRight="@dimen/activity_vertical_margin"
+            android:layout_marginTop="@dimen/divider"
+            android:background="@android:color/white"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/textview_AT_slave"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/bluetooth_spp_padding"
+                android:text="----Slave Gain" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/textview_AT_slave">
+
+                <SeekBar
+                    android:id="@+id/seekBar_AT_slave"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false"
+                    android:max="15"
+                    android:progress="0" />
+            </LinearLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+</ScrollView>

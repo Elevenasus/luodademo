@@ -1,0 +1,869 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.airoha.pequxut.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textViewVer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ver" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="paired list"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:id="@+id/frameList"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <ListView
+                android:id="@+id/list_devices"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="top"
+                android:smoothScrollbar="true" />
+        </LinearLayout>
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Addr" />
+
+                    <EditText
+                        android:id="@+id/editTextBtAddr"
+                        android:layout_width="159dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:text="00:03:33:22:18:26"
+                        android:enabled="false"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/buttonConSpp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="18dp"
+                        android:text="ConSpp" />
+
+                    <Button
+                        android:id="@+id/buttonConBle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="18dp"
+                        android:text="ConBle"
+                        android:visibility="gone" />
+
+                    <Button
+                        android:id="@+id/buttonDisCon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="18dp"
+                        android:text="DisCon"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/textViewConResult"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="result"
+                        android:visibility="gone"/>
+
+                    <TextView
+                        android:id="@+id/textViewConState"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:text="state" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/btnGetMusicSampleRate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Get Music Sample rate" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sampling rate Enum:" />
+
+                    <TextView
+                        android:id="@+id/textViewMusicSampleRateEnum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="#" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="check EQ info"
+                        android:id="@+id/buttonCheckEq"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ind"
+                        android:id="@+id/textViewCheckEqInd"
+                        android:textSize="10dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Set A2DP EQ"
+                        android:id="@+id/buttonSetA2dpPeq"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="idx"/>
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/editTextA2dpIdx"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="mode"/>
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/editTextA2dpMode"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textViewSetA2dpPeqResp"
+                        android:text="resp."/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <Space
+                        android:layout_width="5dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/textViewGetUiDataResp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <Space
+                        android:layout_width="5dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/textViewSetUiDataResp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/buttonLazyForTest"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="lazy data" />
+
+                    <CheckBox
+                        android:id="@+id/ckbEnableExp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:checked="true"
+                        android:text="Exp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Select:" />
+
+                        <RadioButton
+                            android:id="@+id/radioBtnMaster"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:enabled="false"
+                            android:onClick="onRadioButtonClicked"
+                            android:text="Master" />
+
+                        <RadioButton
+                            android:id="@+id/radioBtnFollower"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:enabled="false"
+                            android:onClick="onRadioButtonClicked"
+                            android:text="Follower" />
+                    </RadioGroup>
+
+                    <CheckBox
+                        android:id="@+id/ckbEnableTwsSync"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:checked="false"
+                        android:enabled="false"
+                        android:text="Tws Sync PEQ" />
+                </LinearLayout>
+
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="Select update case"/>-->
+                    <!--<RadioButton-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:onClick="onRadioButtonClicked"-->
+                    <!--android:text="1 sampling rate Master"-->
+                    <!--android:layout_weight="0.5"-->
+                    <!--android:id="@+id/radioBtnOneSamplingRateMaster"/>-->
+                    <!--<RadioButton-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:onClick="onRadioButtonClicked"-->
+                    <!--android:text="1 sampling rate Follower"-->
+                    <!--android:layout_weight="0.5"-->
+                    <!--android:id="@+id/radioBtnOneSamplingRateFollower"/>-->
+                    <!--<RadioButton-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:onClick="onRadioButtonClicked"-->
+                    <!--android:text="3 sampling rate Master"-->
+                    <!--android:layout_weight="0.5"-->
+                    <!--android:id="@+id/radioBtnThreeSamplingRateMaster"/>-->
+
+                    <!--<RadioButton-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:onClick="onRadioButtonClicked"-->
+                    <!--android:text="3 sampling rate Follower"-->
+                    <!--android:layout_weight="0.5"-->
+                    <!--android:id="@+id/radioBtnThreeSamplingRateFollower"/>-->
+                    <!--<RadioButton-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:onClick="onRadioButtonClicked"-->
+                    <!--android:text="1 sampling rate Tws"-->
+                    <!--android:layout_weight="0.5"-->
+                    <!--android:id="@+id/radioBtnOneSamplingRateTws"/>-->
+
+                    <!--<RadioButton-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:onClick="onRadioButtonClicked"-->
+                    <!--android:text="3 sampling rateTws"-->
+                    <!--android:layout_weight="0.5"-->
+                    <!--android:id="@+id/radioBtnThreeSamplingRateTws"/>-->
+                </RadioGroup>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/buttonUpdateRealtimePEQ"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="18dp"
+                        android:layout_weight="0.2"
+                        android:text="Update Realtime" />
+
+                    <Button
+                        android:id="@+id/buttonUpdatePeqWith3SamplingRates"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="18dp"
+                        android:layout_weight="0.2"
+                        android:text="Update Peq With 3 Sampling Rates"
+                        android:visibility="visible" />
+                    <Button
+                        android:id="@+id/buttonUpdatePeqUiData"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="18dp"
+                        android:layout_weight="0.2"
+                        android:text="Update UI to FW"
+                        android:visibility="visible" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Freq. (kHz)" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="200dp"
+                        android:text="Gain" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="70dp"
+                        android:text="Bw" />
+
+                </LinearLayout>
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/editTextFreq0"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:inputType="numberDecimal"
+                        android:text="0.2" />
+
+                    <SeekBar
+                        android:id="@+id/seekBar0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8" />
+
+                    <Space
+                        android:layout_width="5dp"
+                        android:layout_height="wrap_content" />
+
+                    <EditText
+                        android:id="@+id/editTextGain0"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:inputType="numberDecimal"
+                        android:enabled="true"
+                        android:text="" />
+
+                    <Space
+                        android:layout_width="5dp"
+                        android:layout_height="wrap_content" />
+
+                    <EditText
+                        android:id="@+id/editTextBw0"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:inputType="numberDecimal"
+                        android:text="0.04" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/editTextFreq1"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:inputType="numberDecimal"
+                        android:text="0.5" />
+
+                    <SeekBar
+                        android:id="@+id/seekBar1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8" />
+
+                    <Space
+                        android:layout_width="5dp"
+                        android:layout_height="wrap_content" />
+
+                    <EditText
+                        android:id="@+id/editTextGain1"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:inputType="numberDecimal"
+                        android:enabled="true"
+                        android:text="" />
+
+                    <Space
+                        android:layout_width="5dp"
+                        android:layout_height="wrap_content" />
+
+                    <EditText
+                        android:id="@+id/editTextBw1"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:inputType="numberDecimal"
+                        android:text="0.04" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/editTextFreq2"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:inputType="numberDecimal"
+                        android:text="0.4" />
+
+                    <SeekBar
+                        android:id="@+id/seekBar2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8" />
+
+                    <Space
+                        android:layout_width="5dp"
+                        android:layout_height="wrap_content" />
+
+                    <EditText
+                        android:id="@+id/editTextGain2"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:inputType="numberDecimal"
+                        android:enabled="true"
+                        android:text="" />
+
+                    <Space
+                        android:layout_width="5dp"
+                        android:layout_height="wrap_content" />
+
+                    <EditText
+                        android:id="@+id/editTextBw2"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:inputType="numberDecimal"
+                        android:text="0.06" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/editTextFreq3"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:inputType="numberDecimal"
+                        android:text="0.55" />
+
+                    <SeekBar
+                        android:id="@+id/seekBar3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8" />
+
+                    <Space
+                        android:layout_width="5dp"
+                        android:layout_height="wrap_content" />
+
+                    <EditText
+                        android:id="@+id/editTextGain3"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:inputType="numberDecimal"
+                        android:enabled="true"
+                        android:text="" />
+
+                    <Space
+                        android:layout_width="5dp"
+                        android:layout_height="wrap_content" />
+
+                    <EditText
+                        android:id="@+id/editTextBw3"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:inputType="numberDecimal"
+                        android:text="0.075" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/editTextFreq4"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:inputType="numberDecimal"
+                        android:text="0.77" />
+
+                    <SeekBar
+                        android:id="@+id/seekBar4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8" />
+
+                    <Space
+                        android:layout_width="5dp"
+                        android:layout_height="wrap_content" />
+
+                    <EditText
+                        android:id="@+id/editTextGain4"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:inputType="numberDecimal"
+                        android:enabled="true"
+                        android:text="" />
+
+                    <Space
+                        android:layout_width="5dp"
+                        android:layout_height="wrap_content" />
+
+                    <EditText
+                        android:id="@+id/editTextBw4"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:inputType="numberDecimal"
+                        android:text="0.11" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/editTextFreq5"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:inputType="numberDecimal"
+                        android:text="1.0" />
+
+                    <SeekBar
+                        android:id="@+id/seekBar5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8" />
+
+                    <Space
+                        android:layout_width="5dp"
+                        android:layout_height="wrap_content" />
+
+                    <EditText
+                        android:id="@+id/editTextGain5"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:inputType="numberDecimal"
+                        android:enabled="false"
+                        android:text="" />
+
+                    <Space
+                        android:layout_width="5dp"
+                        android:layout_height="wrap_content" />
+
+                    <EditText
+                        android:id="@+id/editTextBw5"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:inputType="numberDecimal"
+                        android:text="0.115" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/editTextFreq6"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:inputType="numberDecimal"
+                        android:text="2.0" />
+
+                    <SeekBar
+                        android:id="@+id/seekBar6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8" />
+
+                    <Space
+                        android:layout_width="5dp"
+                        android:layout_height="wrap_content" />
+
+                    <EditText
+                        android:id="@+id/editTextGain6"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:inputType="numberDecimal"
+                        android:enabled="false"
+                        android:text="" />
+
+                    <Space
+                        android:layout_width="5dp"
+                        android:layout_height="wrap_content" />
+
+                    <EditText
+                        android:id="@+id/editTextBw6"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:inputType="numberDecimal"
+                        android:text="0.5" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/editTextFreq7"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:inputType="numberDecimal"
+                        android:text="4.0" />
+
+                    <SeekBar
+                        android:id="@+id/seekBar7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8" />
+
+                    <Space
+                        android:layout_width="5dp"
+                        android:layout_height="wrap_content" />
+
+                    <EditText
+                        android:id="@+id/editTextGain7"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:inputType="numberDecimal"
+                        android:enabled="false"
+                        android:text="" />
+
+                    <Space
+                        android:layout_width="5dp"
+                        android:layout_height="wrap_content" />
+
+                    <EditText
+                        android:id="@+id/editTextBw7"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:inputType="numberDecimal"
+                        android:text="1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/editTextFreq8"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:inputType="numberDecimal"
+                        android:text="8.0" />
+
+                    <SeekBar
+                        android:id="@+id/seekBar8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8" />
+
+                    <Space
+                        android:layout_width="5dp"
+                        android:layout_height="wrap_content" />
+
+                    <EditText
+                        android:id="@+id/editTextGain8"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:inputType="numberDecimal"
+                        android:enabled="false"
+                        android:text="" />
+
+                    <Space
+                        android:layout_width="5dp"
+                        android:layout_height="wrap_content" />
+
+                    <EditText
+                        android:id="@+id/editTextBw8"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:inputType="numberDecimal"
+                        android:text="2" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/editTextFreq9"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:inputType="numberDecimal"
+                        android:text="16.0" />
+
+                    <SeekBar
+                        android:id="@+id/seekBar9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8" />
+
+                    <Space
+                        android:layout_width="5dp"
+                        android:layout_height="wrap_content" />
+
+                    <EditText
+                        android:id="@+id/editTextGain9"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:inputType="numberDecimal"
+                        android:enabled="false"
+                        android:text="" />
+
+                    <Space
+                        android:layout_width="5dp"
+                        android:layout_height="wrap_content" />
+
+                    <EditText
+                        android:id="@+id/editTextBw9"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.1"
+                        android:inputType="numberDecimal"
+                        android:text="2" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
